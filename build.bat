@@ -36,13 +36,24 @@ copy "node-temp\node-v22.14.0-win-x64\node.exe" "node.exe"
 del /q node.zip
 rmdir /s /q node-temp
 
+echo [3/4] Installing Python dependencies...
 pip install -r requirements.txt
+if %errorlevel% neq 0 (
+    echo [ERROR] Failed to install Python dependencies. Please check your Python and pip versions.
+    pause
+    exit /b 1
+)
 
 echo [4/4] Packaging into single executable...
 if exist build rmdir /s /q build
 if exist dist rmdir /s /q dist
 
 pyinstaller -w -F --add-data "node_modules;node_modules" --add-binary "node.exe;." --icon=icon.ico launch.py
+if %errorlevel% neq 0 (
+    echo [ERROR] PyInstaller build failed!
+    pause
+    exit /b 1
+)
 
 echo =======================================
 echo Build complete! Check the dist folder.
