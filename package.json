@@ -11,6 +11,6 @@
   "license": "ISC",
   "type": "commonjs",
   "dependencies": {
-    "filefive": "^3.0.0"
+    "filefive": "3.0.0"
   }
 }
