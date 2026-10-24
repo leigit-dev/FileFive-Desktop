@@ -23,10 +23,15 @@
 3. 进入目录，双击运行 `build.bat`。
 4. 编译好的单文件程序会在 `dist` 文件夹中生成。
 
-## 开源协议
-本项目遵循 **GPL-3.0** 协议。由于本项目分发包含了 FileFive 的核心代码，因此整体受 GPL 协议约束。详见 `LICENSE` 文件。
+## 开源协议 (License)
 
-## 致谢
+本项目遵循 **GPL-3.0** 协议。
+- **原创代码**：本项目原创的 Python 外壳代码 (`launch.py`)、构建脚本及桌面集成部分，版权归 [leigit-dev] 所有，遵循 GPL-3.0 协议。
+- **核心引擎**：本项目分发的二进制文件中包含的 [FileFive](https://github.com/miroshnikov/filefive) 核心代码，版权归原作者 miroshnikov 所有，同样遵循 GPL-3.0 协议。
+
+根据 GPL-3.0 协议要求，关于包含在发布版中的 FileFive 核心代码的获取方式，请参考本仓库的 Releases 页面。
+
+## 致谢 (Credits)
 - 核心引擎：[miroshnikov/filefive](https://github.com/miroshnikov/filefive)
 - UI 套壳：[Python pywebview](https://pywebview.flowrl.com/)
 - 图标资源 `icon.ico`：提取自原版 FileFive 项目
